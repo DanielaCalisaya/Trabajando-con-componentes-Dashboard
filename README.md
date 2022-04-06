@@ -13,6 +13,6 @@ con esta gran aventura.
 
 ## M9 C44
 
-## Clase 106
+## Clase 106 y 107
 
 ## Ubicación -> Programación/TRABAJOS PRACTICOS/Trabajando con componentes-Dashboard-2/dashboard
