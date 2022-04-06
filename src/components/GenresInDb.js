@@ -2,8 +2,14 @@ import React from 'react'
 import Genre from './Genre';
 
 const GenresInDb = () => {
+
+  /* Antes de retornar el componente creo un array que contendrá todos los nombres de los géneros,
+  ahora lo tenemos como array pero después vendrá como un pedido a la base de datos a travéz de un fetch.
+  Esos cambios lo tendrá el componente padre, que le pasará los datos al componente hijo.
+  El componente hijo Genre es el que se repetirá varias veces  */
+  const genres = ['Acción', 'Animación', 'Aventura', 'Ciencia Ficción', 'Comedia', 'Documental', 'Drama', ' Fantasia', 'Infantiles', 'Musical']
+
   return (
-    
     /*<!-- Genres in DB -->*/
     <div className="col-lg-6 mb-4">						
     <div className="card shadow mb-4">
@@ -12,71 +18,10 @@ const GenresInDb = () => {
       </div>
       <div className="card-body">
         <div className="row">
-          <Genre/>
-          <div className="col-lg-6 mb-4">
-            <div className="card bg-dark text-white shadow">
-              <div className="card-body">
-                Animación
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-6 mb-4">
-            <div className="card bg-dark text-white shadow">
-              <div className="card-body">
-                Aventura
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-6 mb-4">
-            <div className="card bg-dark text-white shadow">
-              <div className="card-body">
-                Ciencia Ficción
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-6 mb-4">
-            <div className="card bg-dark text-white shadow">
-              <div className="card-body">
-                Comedia
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-6 mb-4">
-            <div className="card bg-dark text-white shadow">
-              <div className="card-body">
-                Documental
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-6 mb-4">
-            <div className="card bg-dark text-white shadow">
-              <div className="card-body">
-                Drama
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-6 mb-4">
-            <div className="card bg-dark text-white shadow">
-              <div className="card-body">
-                Fantasia
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-6 mb-4">
-            <div className="card bg-dark text-white shadow">
-              <div className="card-body">
-                Infantiles
-              </div>
-            </div>
-          </div>
-          <div className="col-lg-6 mb-4">
-            <div className="card bg-dark text-white shadow">
-              <div className="card-body">
-                Musical
-              </div>
-            </div>
-          </div>
-
+          <Genre
+            genres = {genres}
+          />
+          {/* A este componente le pasaré por props el array */}
         </div>
       </div>
     </div>

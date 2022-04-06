@@ -1,19 +1,21 @@
 import React from 'react'
 
-const Genre = () => {
+const Genre = ({genres}) => {
     return (
-
-        <div className="col-lg-6 mb-4">
+    /* recorro con un map genres que estoy recibiendo por props y al recorrer dibujo cada bloque,
+    pero tiene que haber un return del map(return implícito)*/
+        genres.map((genre, index) => (
+        <div className="col-lg-6 mb-4" key={index + genre}>
             <div className="card bg-dark text-white shadow">
                 <div className="card-body">
-                    Acción
+                    {genre} 
                 </div>
             </div>
         </div>
-
+       ))
     )
 }
 
 export default Genre;
-/* Quiero recorrer un arrar y usar este componente el cual recibirá por props los parámetros, lo tome de GenressInDb en donde son 10 los generos.
+/* Quiero recorrer un array y usar este componente el cual recibirá por props los parámetros, lo tome de GenressInDb en donde son 10 los generos.
 Entonces recibirá información por props el componente hijo y recorrerá por maps */
