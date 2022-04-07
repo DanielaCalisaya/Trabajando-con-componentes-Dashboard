@@ -2,7 +2,9 @@ import React from 'react';
 import TopBar from './TopBar';
 import ContentRowTop from './ContentRowTop';
 import Footer from './Footer';
-function ContentWrapper(){
+import Table from './Table';
+
+function ContentWrapper() {
     return (
         <React.Fragment>
             {/*<!-- Content Wrapper -->*/}
@@ -11,6 +13,7 @@ function ContentWrapper(){
                 <div id="content">
                     <TopBar />
                     <ContentRowTop />
+                    <Table />
                     <Footer />
                 </div>
             </div>    
@@ -18,3 +21,5 @@ function ContentWrapper(){
     )
 }
 export default ContentWrapper;
+
+/* Al contenedor padre, en donde quiero poner la tabla, alli pongo el contenedor hijo (ContentWrapper-Table) */
